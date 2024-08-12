@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/substyle2.css" type="text/css" rel="stylesheet">
+    <script src="../javascript/jquery-3.6.0.js"></script>
+    <script src="../javascript/contmenuscript.js" defer type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR">
+    <script src="../javascript/include.js"></script>
+    <title> 캠페인 리스트 </title>
+</head>
+<body>
+    <div include-html="header.html" id="header" ></div>
+ 
+    <div class="content">
+        <div class="contmenu">
+        <!-- 웹-좌측(로고밑) -->
+            <div class="wcmenu">
+                <ul class="wnavi">
+                    <li><a href="#">갤러리</a>
+                        <ul class="wsub">
+                            <li><a href="../html/sub4-1.html">디자인</a></li>
+                            <li><a href="../html/sub4-2.html">캠페인</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        <!-- 모바일-상단(헤더아래) -->
+            <div class="mcmenu">
+                <ul class="mcnavi">
+                    <li><a href="#">갤러리</a>
+                        <ul class="mcsub">
+                            <li><a href="../html/sub4-1.html">디자인</a></li>
+                            <li><a href="../html/sub4-2.html">캠페인</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="conts">
+            <div class="ctitle"><h3>캠페인 리스트</h3></div>
+            <hr>
+            <div class="ccont"> <!-- 모바일 작업하면서 둔 임시방편 작업물 (6개 초과시 우측으로 생성) -->
+                <div class="contimg">
+                    <div class="card">
+                        <div class="cicon2"><img src="../image/campaign01.jpg" alt="이미지"></div>
+                        <div class="card-header">음료 깨끗히 비우기</div>
+                    </div>
+                    <div class="card">
+                        <div class="cicon2"><img src="../image/campaign02.jpg" alt="이미지"></div>
+                        <div class="card-header">무단투기 금지</div>
+                    </div>
+                    <div class="card">
+                        <div class="cicon2"><img src="../image/campaign03.jpg" alt="이미지"></div>
+                        <div class="card-header">분리수거 유도</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="popups-c">
+            <div><img src="../image/campaign01.jpg" alt="이미지"></div>
+            <div class="popbtn">닫기</div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popups-c">
+            <div><img src="../image/campaign02.jpg" alt="이미지"></div>
+            <div class="popbtn">닫기</div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popups-c">
+            <div><img src="../image/campaign03.jpg" alt="이미지"></div>
+            <div class="popbtn">닫기</div>
+        </div>
+    </div>
+
+    <div include-html="footer.html" id="footer" ></div>
+</body>
+</html>

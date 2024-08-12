@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "Noto Sans KR";
+    color: #1a1f1f;
+}
+html {
+    width: 100%;
+    background-color: #f4f4f4;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* 최상단 (메뉴) */
+.phead {
+    width: 100%;
+    height: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #c4c4c3;
+}
+/* 로고 */
+.pname {
+    width: 162px;
+    height: 80px;
+    float: left;
+    text-align: center;
+}
+.pname>a {
+  cursor: pointer;
+}
+
+/* 로그인 및 메뉴 (웹) */
+.plog {
+  float: right;
+  display: block;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  right: 9%;
+}
+.plog>a:hover {
+  font-weight: bold;
+  color: #67c18c;
+}
+
+.pmenu {
+  float: right;
+  width: 600px;
+  background-color: #6fbf58;
+  top: 45px;
+  right: 8%;
+  position: absolute;
+  z-index: 5;
+}
+.pnavi>li {
+  float: left;
+  width: 120px;
+}
+.pnavi>li>a {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.pnavi>li:hover {
+  background-color: #62bb46;
+  border-radius: 5px;
+}
+.submenu {
+  display: none;
+}
+.submenu>li {
+  width: 120px;
+  background-color: #8dc63f;
+}
+.submenu>li>a {
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+.submenu>li>a:hover {
+  background-color: #b7d436;
+  font-weight: bold;
+}
+
+/* 로그인 및 메뉴 (모바일) */
+.mnavi>li {
+  width: 100%;
+  padding-bottom: 2px;
+  float: left;
+}
+.mnavi>li>a {
+  background-color: #c4c4c3;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 50px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+.mnavi>li>a:hover {
+  background-color: #b7d436;
+  color: #1a1f1f;
+}
+.msubmenu {
+  display: none;
+  float: left;
+  width: 100%;
+}
+.msubmenu>li {
+  background-color: #f4f4f4;
+}
+.msubmenu>li>a {
+  line-height: 50px;
+  font-size: 14px;
+  margin-bottom: 1px;
+  height: 50px;
+  padding-left: 15px;
+}
+.msubmenu>li>a:hover {
+  background-color: #b7d436;
+}
+.mlog {
+  font-size: 14px;
+  top: 5%;
+  position: absolute;
+}
+
+
+/* 하단이후 파일 복사 후 수정 */
+@media all and (min-width: 768px) { /* [브라우저 창 width가 1024px보다 커지는 순간부터 적용] 데스크탑크기(위치 이동시 하단의 데스크탑,태블릿크기 적용X) */
+  .navbar {
+    display: none;
+  }
+  .pname {
+    margin-left: 25px;
+  }
+}
+@media all and (min-width: 1024px) { /* [브라우저 창 width가 768px보다 작아지는 순간부터 적용] 데스크탑크기 */
+  .navbar {
+    display: none;
+  }
+  .pname {
+    margin-left: 25px;
+  }
+}
+@media all and (max-width: 1024px) { /* [브라우저 창 width가 1024px보다 작아지는 순간부터 적용] 태블릿크기 */
+  .pnavi {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .plog {
+    display: none;
+  }
+  .pname {
+    margin-left: 10px;
+  }
+}
+@media all and (max-width: 768px) { /* [브라우저 창 width가 768px보다 커지는 순간부터 적용] 모바일크기 */
+  .pnavi {
+    display: none;
+  }
+  .plog {
+    display: none;
+  }
+  .pname {
+    margin-left: 4px;
+  }
+}
+
+
+/* 햄버거 버튼 (메뉴바) */
+.navbar {
+  float: right;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+input[id="icon"] {
+  display:none;
+}
+input[id="icon"] + label{
+  position: relative;
+  display:block;
+  width:30px;
+  height:20px;
+  cursor:pointer;  /* 커서를 올려놓을 때 모양이 바뀐다. */
+} 
+
+input[id="icon"] + label > span {
+  position: absolute;
+  display:block;
+  width:100%;
+  height:5px;
+  border-radius:30px;
+  background:#1a1f1f;
+  transition: all 0.35s;  /* 진행되는 과정들을 천천히 보여줄 수 있다. 0.35초 동안 진행됨 */
+  z-index:2;
+}
+
+input[id="icon"] + label > span:nth-child(1) {
+  top:0px;
+}
+
+input[id="icon"] + label > span:nth-child(2) {
+  top:50%;
+  transform: translateY(-50%);  /* 엘리먼트를 변형할 때 쓴다. 비틀거나 구부리거나 돌릴 때 . 여러가지로 모양을 바꿀 때 */
+}
+
+input[id="icon"] + label > span:nth-child(3) {
+  bottom:0px;
+}
+
+
+input[id="icon"]:checked + label > span:nth-child(1) {
+  top:50%;
+  transform:translateY(-50%) rotate(45deg);
+}
+
+input[id="icon"]:checked + label > span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="icon"]:checked + label > span:nth-child(3) {
+  bottom:50%;
+  transform:translateY(50%) rotate(-45deg);
+}
+
+#icon + label + #mnavbar {
+  position:fixed;  /* 스크롤을 내리더라도 같은 위치에서 붙어다닌다. */
+  width: 60%;
+  height:100%;
+  background-color:#62bb46;
+  top:0px;
+  padding: 80px 15px 0 15px ;
+  box-sizing:border-box;
+  right:-100%;
+  z-index:1;
+  transition: all 0.35s;
+}
+
+#icon:checked + label + #mnavbar {
+  right:0px;
+}
+
